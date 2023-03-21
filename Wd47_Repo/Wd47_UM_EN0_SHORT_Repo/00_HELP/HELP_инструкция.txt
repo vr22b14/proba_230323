@@ -1,0 +1,71 @@
+(1)_ Делаем локальный репозиторий на рабочем ПК
+(2)_ Делаем репозиторий на GitHub
+(3)_ Делаем локальный репозиторий на домашнем ПК
+(4)_ Проверяем возможность связки домашнего репозитория и репозитория на GitHub (запрашивает пароль GitHub или не запрашивает).
+=====
+=====
+=====
+=====
+(1)_ Создаем репозиторий на GitHub с именем <proba_230321>.
+(1)_ <vr22b14/proba_230321>
+.....
+(2)_ Создаем на gthub репозиторий <proba_230321> для опытов (для выяснения пригодности GitHub [либо нашего сервера] для разработки технической документации).
+(2)_ ссылка на этот репозиторий: https://github.com/vr22b14/pages.git
+(2)_ Далее подробно по шагам на GitHub:
+(2)=> Create a new repository (+New repository) (https://github.com/new)
+(2)=> Create a new repository -> Repository name -> <proba_230321>
+(2)=> Create a new repository -> Description (optional) -> PROBA for technical documentation
+(2)=> Create a new repository -> Public
+(2)=> Create a new repository -> Create repository
+(2)=> Получаем ссылку на репозиторий:
+https://github.com/vr22b14/proba_230321
+(выполнено)
+.....
+(2)_ Отдельный токен для этого репозитория я не создавал.
+.....
+(3)_ Командой [cd <Путь к каталогу>] установливаем текущий каталог, в который будем клонировать репозиторий из GitHub. Если сразу не установить, то репозиторий будет клонироваться в текущий каталог. Путь к этому каталогу нужно смотреть в командной строке или в терминале Windows PowerShell. Для этого нужно кликнуть правой кнопкой мыши по меню [Пуск] и выбрать в контекстном меню Windows PowerShell для запуска.
+(3)_ Повторимся, что командой [cd <Путь к каталогу>] установливаем текущий каталог (с помощью Windows PowerShell):
+> cd C:\Users\Romanov\Documents\000_MyDocs\002_Manuals_Repo_proba
+(выполнено)
+.....
+(3)_ Командой [git init] создаем Git-репозиторий на локальном ПК на базе папки <002_Manuals_Repo_proba>.
+> git init
+(3)_ git вывел сообщение:
+Initialized empty Git repository in C:/Users/Romanov/Documents/000_MyDocs/002_Manuals_Repo_proba/.git/
+(выполнено)
+.....
+.....
+(5)_ СВЯЗЫВАЕМ GitHub-РЕПОЗИТОРИЙ С ЛОКАЛЬНЫМ:
+(5)_ Командой [git remote add target <URL удаленного репозитория на сервере GitHub>] свяжем GitHub-репозиторий с локальным.
+(5)_ Чтобы привязать репозиторий на GitHub к имени <origin> была использована команда:
+> git remote add origin https://github.com/vr22b14/proba_230321
+(5)_ git НЕ_выводил сообщения.
+.....
+(5)_ Команда, чтобы посмотреть, какие удаленные репозитории привязаны к нашему локальному репозиторию.
+> git remote
+(5)_ Расширенный вариант этой команды - показывает URL привязанных репозиториев.
+> git remote -v
+(5)_ git выведет сообщение:
+origin  https://github.com/vr22b14/proba_230321 (fetch)
+origin  https://github.com/vr22b14/proba_230321 (push)
+.....
+.....
+(6)_ Команда [git status], чтобы посмотреть состояние репозитория.
+> git status
+(6)_ git выведет сообщение:
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Wd47_Repo/ (красным цветом)
+
+nothing added to commit but untracked files present (use "git add" to track)
+.....
+.....
+(6)_ Команда [git add *.*], чтобы добавить все файлы в отслеживание. Сообщения от <git> не выводились.
+> git add *.*
+(6)_ Команда [git status], чтобы посмотреть состояние репозитория.
+> git status
+(6)_ git выведет сообщение:
