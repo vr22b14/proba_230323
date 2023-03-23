@@ -174,3 +174,46 @@ no changes added to commit (use "git add" and/or "git commit -a")
 (6)_ Команда [git add *.*], чтобы добавить все файлы в отслеживание. Сообщения от <git> не выводились.
 > git add *.*
 .....
+(6)_ Команда [git status], чтобы посмотреть состояние репозитория.
+> git status
+(6)_ git выведет сообщение:
+.....
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Wd47_Repo/Wd47_UM_EN0_SHORT_Repo/00_HELP/HELP_Repo_Proba1.txt
+        deleted:    "Wd47_Repo/Wd47_UM_EN0_SHORT_Repo/00_HELP/HELP_\320\270\320\275\321\201\321\202\321\200\321\203\320\272\321\206\320\270\321\217.txt"
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Wd47_Repo/Wd47_UM_EN0_SHORT_Repo/00_HELP/HELP_Repo_Proba1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        proba_230321/
+.....
+(7)_ Команда [git commit -m "20230323_0901"], чтобы закоммитить все изменения.
+> git commit -m "20230323_0901"
+(7)_ git выведет сообщение:
+.....
+[main 1cd0c84] 20230323_0901
+ 2 files changed, 176 insertions(+), 71 deletions(-)
+ create mode 100644 Wd47_Repo/Wd47_UM_EN0_SHORT_Repo/00_HELP/HELP_Repo_Proba1.txt
+ delete mode 100644 "Wd47_Repo/Wd47_UM_EN0_SHORT_Repo/00_HELP/HELP_\320\270\320\275\321\201\321\202\321\200\321\203\320\272\321\206\320\270\321\217.txt"
+ .....
+  .....
+(9)_ Команда [git push --all], чтобы отправить обе моих ветки (main (вместо origin у лектора), gh-pages) на <GitHub>.
+> git push --all
+(9)_ git выведет сообщение:
+.....
+To https://github.com/vr22b14/proba_230321
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/vr22b14/proba_230321'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+.....
+(6)_ Команда [git commit -a -m "20230323_0911_Elimination of conflict"], чтобы сообщить <git>, что конфликт разрешен.
+(6)_ git выведет сообщение:
